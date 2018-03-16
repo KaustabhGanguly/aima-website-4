@@ -1,0 +1,11 @@
+baseURL = "/"
+languageCode = "en-us"
+
+title = "EXERCISES"
+theme = "kraiklyn"
+
+pygmentsCodeFences = true
+pygmentsStyle = "monokailight"
+
+
+
