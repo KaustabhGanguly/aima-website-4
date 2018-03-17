@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "kaustabhganguly.github.io/aima-website-4"
 languageCode = "en-us"
 publishDir = "docs"
 
