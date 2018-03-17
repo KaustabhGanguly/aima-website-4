@@ -18,3 +18,6 @@ How this works :
 - The website will be created/updated in gh-page branch in your repository .
 - Manually open the index.html and add ```<link rel="stylesheet" href="css/styles.css">``` in the header , to link the css file.
 - Voila ! It's done !
+
+
+# I have implemented STATICMAN commenting service , which is better than disqus , because it doesn't require any signup to comment and the comments are directly added to the gh-pages branch's ```_data``` folder . One can gice suggestions/ask questions via these comment section . We can also apply a filter that will turn off spam , that I have currently disabled .
