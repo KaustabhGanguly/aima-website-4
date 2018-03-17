@@ -7,7 +7,7 @@ In the website page :
 - It has a fixed content bar that shows all the question headings .
 
 So , if we use Hugo for building the Website this Summer , then :
-- We will make 28 pages like this for 28 websites , all connected with a table of contents directory as the index page .
+- We will make X no. of pages like this for X exercises , all connected with a table of contents directory as the index page .
 
 How this works :
 - Fork this repo ( master branch ).
