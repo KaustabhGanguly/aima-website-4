@@ -16,5 +16,5 @@ How this works :
 - Run Hugo Serve ( To check if the markdown file is properly rendered )
 - Then run deploy.sh file .( Change the repository link to your repo by editing the file )
 - The website will be created/updated in gh-page branch in your repository .
-- Manually open the index.html and add <link rel="stylesheet" href="css/styles.css"> in the header , to link the css file.
+- Manually open the index.html and add //<link rel="stylesheet" href="css/styles.css">// in the header , to link the css file.
 - Voila ! It's done !
