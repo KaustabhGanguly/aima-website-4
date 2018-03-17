@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+                              });
+    </script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+
+  <title>EXERCISES</title>
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="kaustabhganguly.github.io/aima-website-4css/styles.css">
+  <link href="kaustabhganguly.github.io/aima-website-4/index.xml" rel="alternate" type="application/rss+xml" title="EXERCISES" />
+
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="navigation">
+        <div>
+    AIMA
+</div>
+
+        <h1 class="site-title"><a href="kaustabhganguly.github.io/aima-website-4">EXERCISES</a></h1>
+
+
+        <nav class="internal">
+            <ul>
+    
+        
+            
+    <li>
+        <a href="#introduction">Introduction</a>
+        <ul>
+            
+            
+                <li><a href="#code">Code sample</a></li>
+            
+        </ul>
+    </li>
+
+
+
+        
+            
+    <li>
+        <a href="#characters">Questions</a>
+        <ul>
+            
+            
+                <li><a href="#7.4">Exercise Sample 1</a></li>
+            
+                <li><a href="#20.10">Exercise Sample 2</a></li>
+            
+                <li><a href="#4.4">Exercise Sample 3</a></li>
+            
+        </ul>
+    </li>
+
+
+
+        
+    
+</ul>
+
+        </nav>
+
+        <nav class="external">
+            <div class="external-title"></div>
+            
+        </nav>
+    </div>
+
+</div>
+
+<div class="content">
+    
+        
+            
+    <section class="page" id="introduction">
+    <h1>
+        <a href="#introduction">Introduction</a>
+    </h1>
+    <div class="content">
+        <p>This is a typical Exercise page
+ Just by adding a .markdown file in the contents folder we  can create a post and it will get organized automatically.</p>
+
+<p>We can create different pages like this for each exercise , and it will be easy to navigate with the fixed content box .</p>
+
+<p>I included sample exercises below .</p>
+
+<div class="block note">
+    <p>It is an</p>
+
+<p>Example of Block Quote .</p>
+
+</div>
+
+
+    </div>
+</section>
+
+    
+            
+                <section class="page" id="code">
+    <h1>
+        <a href="#code">Code sample</a>
+    </h1>
+    <div class="content">
+        <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/python</span>
+
+<span style="color:#75715e"># This script will monitor templates folder and automatically compile nunjucks html templates on change</span>
+
+<span style="color:#f92672">import</span> <span style="color:#111">os</span>
+<span style="color:#f92672">import</span> <span style="color:#111">sys</span>
+<span style="color:#f92672">from</span> <span style="color:#111">datetime</span> <span style="color:#f92672">import</span> <span style="color:#111">datetime</span>
+<span style="color:#f92672">from</span> <span style="color:#111">subprocess</span> <span style="color:#f92672">import</span> <span style="color:#111">call</span>
+<span style="color:#f92672">from</span> <span style="color:#111">time</span> <span style="color:#f92672">import</span> <span style="color:#111">sleep</span>
+
+<span style="color:#00a8c8">try</span><span style="color:#111">:</span>
+    <span style="color:#111">NUNJUCKS_REPO</span> <span style="color:#f92672">=</span> <span style="color:#111">sys</span><span style="color:#f92672">.</span><span style="color:#111">argv</span><span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span>
+<span style="color:#00a8c8">except</span> <span style="color:#75af00">IndexError</span><span style="color:#111">:</span>
+    <span style="color:#111">NUNJUCKS_REPO</span> <span style="color:#f92672">=</span> <span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">getenv</span><span style="color:#111">(</span><span style="color:#d88200"></span><span style="color:#d88200">&#34;NUNJUCKS_REPO&#34;</span><span style="color:#111">)</span>
+<span style="color:#00a8c8">try</span><span style="color:#111">:</span>
+    <span style="color:#111">TEMPLATES_DIR</span> <span style="color:#f92672">=</span> <span style="color:#111">sys</span><span style="color:#f92672">.</span><span style="color:#111">argv</span><span style="color:#111">[</span><span style="color:#ae81ff">2</span><span style="color:#111">]</span>
+<span style="color:#00a8c8">except</span> <span style="color:#75af00">IndexError</span><span style="color:#111">:</span>
+    <span style="color:#111">TEMPLATES_DIR</span> <span style="color:#f92672">=</span> <span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">getenv</span><span style="color:#111">(</span><span style="color:#d88200"></span><span style="color:#d88200">&#34;TEMPLATES_DIR&#34;</span><span style="color:#111">)</span>
+
+<span style="color:#111">FILES</span> <span style="color:#f92672">=</span> <span style="color:#111">{}</span>
+<span style="color:#111">TIMER</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+
+<span style="color:#111">COLOUR_END</span> <span style="color:#f92672">=</span> <span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#8045ff">\033</span><span style="color:#d88200">[0m&#39;</span>
+<span style="color:#111">COLOUR_GREEN</span> <span style="color:#f92672">=</span> <span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#8045ff">\033</span><span style="color:#d88200">[92m&#39;</span>
+<span style="color:#111">COLOUR_BLUE</span> <span style="color:#f92672">=</span> <span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#8045ff">\033</span><span style="color:#d88200">[94m&#39;</span>
+
+
+<span style="color:#00a8c8">def</span> <span style="color:#75af00">check_templates</span><span style="color:#111">(</span><span style="color:#111">templates_dir</span><span style="color:#f92672">=</span><span style="color:#111">TEMPLATES_DIR</span><span style="color:#111">):</span>
+    <span style="color:#111">file_list</span> <span style="color:#f92672">=</span> <span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">listdir</span><span style="color:#111">(</span><span style="color:#111">templates_dir</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">for</span> <span style="color:#111">item</span> <span style="color:#f92672">in</span> <span style="color:#111">file_list</span><span style="color:#111">:</span>
+        <span style="color:#00a8c8">if</span> <span style="color:#111">item</span><span style="color:#f92672">.</span><span style="color:#111">split</span><span style="color:#111">(</span><span style="color:#d88200"></span><span style="color:#d88200">&#34;.&#34;</span><span style="color:#111">)[</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#111">]</span> <span style="color:#f92672">==</span> <span style="color:#d88200"></span><span style="color:#d88200">&#34;html&#34;</span><span style="color:#111">:</span>
+            <span style="color:#111">modified</span> <span style="color:#f92672">=</span> <span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">path</span><span style="color:#f92672">.</span><span style="color:#111">getmtime</span><span style="color:#111">(</span><span style="color:#111">templates_dir</span> <span style="color:#f92672">+</span> <span style="color:#d88200"></span><span style="color:#d88200">&#34;/&#34;</span> <span style="color:#f92672">+</span> <span style="color:#111">item</span><span style="color:#111">)</span>
+            <span style="color:#00a8c8">if</span> <span style="color:#111">item</span> <span style="color:#f92672">in</span> <span style="color:#111">FILES</span><span style="color:#111">:</span>
+                <span style="color:#00a8c8">if</span> <span style="color:#111">FILES</span><span style="color:#111">[</span><span style="color:#111">item</span><span style="color:#111">]</span> <span style="color:#f92672">!=</span> <span style="color:#111">modified</span><span style="color:#111">:</span>
+                    <span style="color:#111">FILES</span><span style="color:#111">[</span><span style="color:#111">item</span><span style="color:#111">]</span> <span style="color:#f92672">=</span> <span style="color:#111">modified</span>
+                    <span style="color:#111">precompile</span><span style="color:#111">(</span><span style="color:#111">templates_dir</span><span style="color:#111">,</span> <span style="color:#111">item</span><span style="color:#111">)</span>
+            <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+                <span style="color:#00a8c8">print</span> <span style="color:#111">(</span><span style="color:#111">COLOUR_BLUE</span> <span style="color:#f92672">+</span> <span style="color:#111">item</span> <span style="color:#f92672">+</span> <span style="color:#d88200"></span><span style="color:#d88200">&#34; is being watched&#34;</span> <span style="color:#f92672">+</span> <span style="color:#111">COLOUR_END</span><span style="color:#111">)</span>
+                <span style="color:#111">FILES</span><span style="color:#111">[</span><span style="color:#111">item</span><span style="color:#111">]</span> <span style="color:#f92672">=</span> <span style="color:#111">modified</span>
+                <span style="color:#111">precompile</span><span style="color:#111">(</span><span style="color:#111">templates_dir</span><span style="color:#111">,</span> <span style="color:#111">item</span><span style="color:#111">)</span>
+
+
+<span style="color:#00a8c8">def</span> <span style="color:#75af00">precompile</span><span style="color:#111">(</span><span style="color:#111">tempates_dir</span><span style="color:#111">,</span> <span style="color:#111">filename</span><span style="color:#111">):</span>
+    <span style="color:#111">compiled_filename</span> <span style="color:#f92672">=</span> <span style="color:#111">filename</span><span style="color:#f92672">.</span><span style="color:#111">replace</span><span style="color:#111">(</span><span style="color:#d88200"></span><span style="color:#d88200">&#34;html&#34;</span><span style="color:#111">,</span> <span style="color:#d88200"></span><span style="color:#d88200">&#34;js&#34;</span><span style="color:#111">)</span>
+    <span style="color:#111">path_to_js</span> <span style="color:#f92672">=</span> <span style="color:#111">tempates_dir</span> <span style="color:#f92672">+</span> <span style="color:#d88200"></span><span style="color:#d88200">&#34;/&#34;</span> <span style="color:#f92672">+</span> <span style="color:#111">compiled_filename</span>
+    <span style="color:#111">path_to_html</span> <span style="color:#f92672">=</span> <span style="color:#111">tempates_dir</span> <span style="color:#f92672">+</span> <span style="color:#d88200"></span><span style="color:#d88200">&#34;/&#34;</span> <span style="color:#f92672">+</span> <span style="color:#111">filename</span>
+    <span style="color:#00a8c8">if</span> <span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">path</span><span style="color:#f92672">.</span><span style="color:#111">exists</span><span style="color:#111">(</span><span style="color:#111">path_to_js</span><span style="color:#111">):</span>
+        <span style="color:#111">call</span><span style="color:#111">(</span><span style="color:#d88200"></span><span style="color:#d88200">&#34;rm -f &#34;</span> <span style="color:#f92672">+</span> <span style="color:#111">path_to_js</span><span style="color:#111">,</span> <span style="color:#111">shell</span><span style="color:#f92672">=</span><span style="color:#111">True</span><span style="color:#111">)</span>
+    <span style="color:#111">command</span> <span style="color:#f92672">=</span> <span style="color:#111">NUNJUCKS_REPO</span> <span style="color:#f92672">+</span> <span style="color:#d88200"></span><span style="color:#d88200">&#34;/bin/precompile --name &#34;</span> <span style="color:#f92672">+</span> <span style="color:#111">filename</span> <span style="color:#f92672">+</span> <span style="color:#d88200"></span><span style="color:#d88200">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#111">path_to_html</span>
+    <span style="color:#111">command</span> <span style="color:#f92672">=</span> <span style="color:#111">command</span> <span style="color:#f92672">+</span> <span style="color:#d88200"></span><span style="color:#d88200">&#34; &gt;&gt; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#111">path_to_js</span>
+    <span style="color:#111">call</span><span style="color:#111">(</span><span style="color:#111">command</span><span style="color:#111">,</span> <span style="color:#111">shell</span><span style="color:#f92672">=</span><span style="color:#111">True</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#111">COLOUR_GREEN</span> <span style="color:#f92672">+</span> <span style="color:#111">datetime</span><span style="color:#f92672">.</span><span style="color:#111">now</span><span style="color:#111">()</span><span style="color:#f92672">.</span><span style="color:#111">strftime</span><span style="color:#111">(</span><span style="color:#d88200"></span><span style="color:#d88200">&#34;</span><span style="color:#d88200">%X</span><span style="color:#d88200">&#34;</span> <span style="color:#f92672">+</span> <span style="color:#d88200"></span><span style="color:#d88200">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#111">filename</span> <span style="color:#f92672">+</span> <span style="color:#d88200"></span><span style="color:#d88200">&#34; ...OK&#34;</span><span style="color:#111">)</span> <span style="color:#f92672">+</span> <span style="color:#111">COLOUR_END</span><span style="color:#111">)</span>
+
+
+<span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200"></span><span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+    <span style="color:#00a8c8">while</span> <span style="color:#111">True</span><span style="color:#111">:</span>
+        <span style="color:#111">check_templates</span><span style="color:#111">()</span>
+        <span style="color:#111">sleep</span><span style="color:#111">(</span><span style="color:#111">TIMER</span><span style="color:#111">)</span></code></pre></div>
+    </div>
+</section>
+
+            
+
+
+
+        
+            
+    <section class="page" id="characters">
+    <h1>
+        <a href="#characters">Questions</a>
+    </h1>
+    <div class="content">
+        <p>This page reflects the features of this site:
+- We can create Mathjax integrated posts.
+- We can create code samples.
+- <strong>Markdown Supported</strong>
+- Can insert Code Snippet .
+- Can add disqus comment bar at the end .
+- Full templated blog style with minimalistic css
+- Full support and extensive documentation from Hugo</p>
+
+<p>Following are the examples of what kind of posts we can make .</p>
+
+    </div>
+</section>
+
+    
+            
+                <section class="page" id="7.4">
+    <h1>
+        <a href="#7.4">Exercise Sample 1</a>
+    </h1>
+    <div class="content">
+        <p><strong>7.4</strong> Which of the following are correct?</p>
+
+<ol>
+<li><p>${False} \models {True}$.</p></li>
+
+<li><p>${True} \models {False}$.</p></li>
+
+<li><p>$(A\land B)  \models (A{\;\;{\Leftrightarrow}\;\;}B)$.</p></li>
+
+<li><p>$A{\;\;{\Leftrightarrow}\;\;}B \models A \lor B$.</p></li>
+
+<li><p>$A{\;\;{\Leftrightarrow}\;\;}B \models \lnot A \lor B$.</p></li>
+
+<li><p>$(A\land B){:\;{\Rightarrow}:\;}C \models (A{:\;{\Rightarrow}:\;}C)\lor(B{:\;{\Rightarrow}:\;}C)$.</p></li>
+
+<li><p>$(C\lor (\lnot A \land \lnot B)) \equiv ((A{:\;{\Rightarrow}:\;}C) \land (B {:\;{\Rightarrow}:\;}C))$.</p></li>
+
+<li><p>$(A\lor B) \land (\lnot C\lor\lnot D\lor E) \models (A\lor B)$.</p></li>
+
+<li><p>$(A\lor B) \land (\lnot C\lor\lnot D\lor E) \models (A\lor B) \land (\lnot D\lor E)$.</p></li>
+
+<li><p>$(A\lor B) \land \lnot(A {:\;{\Rightarrow}:\;}B)$ is satisfiable.</p></li>
+
+<li><p>$(A{\;\;{\Leftrightarrow}\;\;}B) \land (\lnot A \lor B)$
+is satisfiable.</p></li>
+
+<li><p>$(A{\;\;{\Leftrightarrow}\;\;}B) {\;\;{\Leftrightarrow}\;\;}C$ has
+the same number of models as $(A{\;\;{\Leftrightarrow}\;\;}B)$ for
+any fixed set of proposition symbols that includes $A$, $B$, $C$.</p></li>
+</ol>
+
+    </div>
+</section>
+
+            
+                <section class="page" id="20.10">
+    <h1>
+        <a href="#20.10">Exercise Sample 2</a>
+    </h1>
+    <div class="content">
+        <p><strong>20.10</strong> Consider a single Boolean random variable $Y$ (the “classification”).
+Let the prior probability $P(Y{{\,=\,}}true)$ be $\pi$. Let’s try to
+find $\pi$, given a training set $D{{\,=\,}}(y_1,\ldots,y_N)$ with $N$
+independent samples of $Y$. Furthermore, suppose $p$ of the $N$ are
+positive and $n$ of the $N$ are negative.</p>
+
+<ol>
+<li><p>Write down an expression for the likelihood of $D$ (i.e., the
+probability of seeing this particular sequence of examples, given a
+fixed value of $\pi$) in terms of $\pi$, $p$, and $n$.</p></li>
+
+<li><p>By differentiating the log likelihood $L$, find the value of $\pi$
+that maximizes the likelihood.</p></li>
+
+<li><p>Now suppose we add in $k$ Boolean random variables
+$X_1, X_2,\ldots,X_k$ (the “attributes”) that describe each sample,
+and suppose we assume that the attributes are conditionally
+independent of each other given the goal $Y$. Draw the Bayes net
+corresponding to this assumption.</p></li>
+
+<li><p>Write down the likelihood for the data including the attributes,
+using the following additional notation:</p>
+
+<ul>
+<li><p>$\alpha_i$ is $P(X_i{{\,=\,}}true | Y{{\,=\,}}true)$.</p></li>
+
+<li><p>$\beta_i$ is $P(X_i{{\,=\,}}true | Y{{\,=\,}}false)$.</p></li>
+
+<li><p>$p_i^+$ is the count of samples for which $X_i{{\,=\,}}true$
+and $Y{{\,=\,}}true$.</p></li>
+
+<li><p>$n_i^+$ is the count of samples for which $X_i{{\,=\,}}false$
+and $Y{{\,=\,}}true$.</p></li>
+
+<li><p>$p_i^-$ is the count of samples for which $X_i{{\,=\,}}true$
+and $Y{{\,=\,}}false$.</p></li>
+
+<li><p>$n_i^-$ is the count of samples for which $X_i{{\,=\,}}false$
+and $Y{{\,=\,}}false$.</p></li>
+</ul>
+
+<p>[<em>Hint</em>: consider first the probability of seeing a
+single example with specified values for $X_1, X_2,\ldots,X_k$ and
+$Y$.]</p></li>
+
+<li><p>By differentiating the log likelihood $L$, find the values of
+$\alpha_i$ and $\beta_i$ (in terms of the various counts) that
+maximize the likelihood and say in words what these
+values represent.</p></li>
+
+<li><p>Let $k = 2$, and consider a data set with 4 all four possible
+examples of thexor function. Compute the maximum
+likelihood estimates of $\pi$, $\alpha_1$, $\alpha_2$, $\beta_1$,
+and $\beta_2$.</p></li>
+
+<li><p>Given these estimates of $\pi$, $\alpha_1$, $\alpha_2$, $\beta_1$,
+and $\beta_2$, what are the posterior probabilities
+$P(Y{{\,=\,}}true | x_1,x_2)$ for each example?</p></li>
+</ol>
+
+    </div>
+</section>
+
+            
+                <section class="page" id="4.4">
+    <h1>
+        <a href="#4.4">Exercise Sample 3</a>
+    </h1>
+    <div class="content">
+        <p>Q. In Section 4.4.1 we introduced belief states to solve sensorless search problems. A sequence of actions solves a sensorless problem if it maps every physical state in the initial belief state <i>b</i> to a goal state. Suppose the agent knows h*(s), the true optimal cost of solving the physical state <i>s</i> in the fully observable problem, for every state <i>s</i> in <i>b</i>. Find an admissible heuristic <i>h(b)</i> for the sensorless problem in terms of these costs, and prove its admissibilty. Comment on the accuracy of this heuristic on the sensorless vacuum problem of : <img src="https://image.ibb.co/gvmzFn/Screen_Shot_2018_02_18_at_4_29_31_PM.png" alt="down" />How well does : $$A^∗$$ perform?
+ (id=4.4 section=4.4.1)</p>
+
+    </div>
+</section>
+
+            
+
+
+
+        
+    
+</div>
+</body>
+</html>
+

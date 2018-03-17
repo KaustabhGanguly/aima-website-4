@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>kaustabhganguly.github.io/aima-website-4/introduction/</loc>
+    <lastmod>2018-01-27T15:42:17+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>kaustabhganguly.github.io/aima-website-4/introduction/code/</loc>
+    <lastmod>2018-01-28T21:48:10+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>kaustabhganguly.github.io/aima-website-4/questions/exercise-sample-2/</loc>
+    <lastmod>2018-01-28T21:54:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>kaustabhganguly.github.io/aima-website-4/questions/</loc>
+    <lastmod>2018-01-28T22:01:36+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>kaustabhganguly.github.io/aima-website-4/questions/exercise-sample-1/</loc>
+    <lastmod>2018-01-28T21:55:52+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>kaustabhganguly.github.io/aima-website-4/questions/exercise-sample-3/</loc>
+    <lastmod>2018-01-28T21:57:07+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>kaustabhganguly.github.io/aima-website-4/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>kaustabhganguly.github.io/aima-website-4/</loc>
+    <lastmod>2018-01-28T21:48:10+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>kaustabhganguly.github.io/aima-website-4/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EXERCISES</title>
+    <link>kaustabhganguly.github.io/aima-website-4/</link>
+    <description>Recent content on EXERCISES</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Jan 2018 21:48:10 +0100</lastBuildDate>
+    
+	<atom:link href="kaustabhganguly.github.io/aima-website-4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Code sample</title>
+      <link>kaustabhganguly.github.io/aima-website-4/introduction/code/</link>
+      <pubDate>Sun, 28 Jan 2018 21:48:10 +0100</pubDate>
+      
+      <guid>kaustabhganguly.github.io/aima-website-4/introduction/code/</guid>
+      <description>#!/usr/bin/python # This script will monitor templates folder and automatically compile nunjucks html templates on change import os import sys from datetime import datetime from subprocess import call from time import sleep try: NUNJUCKS_REPO = sys.argv[1] except IndexError: NUNJUCKS_REPO = os.getenv(&amp;#34;NUNJUCKS_REPO&amp;#34;) try: TEMPLATES_DIR = sys.argv[2] except IndexError: TEMPLATES_DIR = os.getenv(&amp;#34;TEMPLATES_DIR&amp;#34;) FILES = {} TIMER = 1 COLOUR_END = &amp;#39;\033[0m&amp;#39; COLOUR_GREEN = &amp;#39;\033[92m&amp;#39; COLOUR_BLUE = &amp;#39;\033[94m&amp;#39; def check_templates(templates_dir=TEMPLATES_DIR): file_list = os.listdir(templates_dir) for item in file_list: if item.</description>
+    </item>
+    
+    <item>
+      <title>Exercise Sample 1</title>
+      <link>kaustabhganguly.github.io/aima-website-4/questions/exercise-sample-2/</link>
+      <pubDate>Sun, 28 Jan 2018 21:54:02 +0100</pubDate>
+      
+      <guid>kaustabhganguly.github.io/aima-website-4/questions/exercise-sample-2/</guid>
+      <description>7.4 Which of the following are correct?
+ ${False} \models {True}$.
+ ${True} \models {False}$.
+ $(A\land B) \models (A{\;\;{\Leftrightarrow}\;\;}B)$.
+ $A{\;\;{\Leftrightarrow}\;\;}B \models A \lor B$.
+ $A{\;\;{\Leftrightarrow}\;\;}B \models \lnot A \lor B$.
+ $(A\land B){:\;{\Rightarrow}:\;}C \models (A{:\;{\Rightarrow}:\;}C)\lor(B{:\;{\Rightarrow}:\;}C)$.
+ $(C\lor (\lnot A \land \lnot B)) \equiv ((A{:\;{\Rightarrow}:\;}C) \land (B {:\;{\Rightarrow}:\;}C))$.
+ $(A\lor B) \land (\lnot C\lor\lnot D\lor E) \models (A\lor B)$.
+ $(A\lor B) \land (\lnot C\lor\lnot D\lor E) \models (A\lor B) \land (\lnot D\lor E)$.</description>
+    </item>
+    
+    <item>
+      <title>Exercise Sample 2</title>
+      <link>kaustabhganguly.github.io/aima-website-4/questions/exercise-sample-1/</link>
+      <pubDate>Sun, 28 Jan 2018 21:55:52 +0100</pubDate>
+      
+      <guid>kaustabhganguly.github.io/aima-website-4/questions/exercise-sample-1/</guid>
+      <description>20.10 Consider a single Boolean random variable $Y$ (the “classification”). Let the prior probability $P(Y{{\,=\,}}true)$ be $\pi$. Let’s try to find $\pi$, given a training set $D{{\,=\,}}(y_1,\ldots,y_N)$ with $N$ independent samples of $Y$. Furthermore, suppose $p$ of the $N$ are positive and $n$ of the $N$ are negative.
+ Write down an expression for the likelihood of $D$ (i.e., the probability of seeing this particular sequence of examples, given a fixed value of $\pi$) in terms of $\pi$, $p$, and $n$.</description>
+    </item>
+    
+    <item>
+      <title>Exercise Sample 3</title>
+      <link>kaustabhganguly.github.io/aima-website-4/questions/exercise-sample-3/</link>
+      <pubDate>Sun, 28 Jan 2018 21:57:07 +0100</pubDate>
+      
+      <guid>kaustabhganguly.github.io/aima-website-4/questions/exercise-sample-3/</guid>
+      <description>Q. In Section 4.4.1 we introduced belief states to solve sensorless search problems. A sequence of actions solves a sensorless problem if it maps every physical state in the initial belief state b to a goal state. Suppose the agent knows h*(s), the true optimal cost of solving the physical state s in the fully observable problem, for every state s in b. Find an admissible heuristic h(b) for the sensorless problem in terms of these costs, and prove its admissibilty.</description>
+    </item>
+    
+  </channel>
+</rss>
