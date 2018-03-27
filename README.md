@@ -20,4 +20,4 @@ How this works :
 - Voila ! It's done !
 
 
-# I have implemented STATICMAN commenting service , which is better than disqus , because it doesn't require any signup to comment and the comments are directly added to the gh-pages branch's ```_data``` folder . One can gice suggestions/ask questions via these comment section . We can also apply a filter that will turn off spam , that I have currently disabled .
+# I have implemented STATICMAN commenting service , which is better than disqus , because it doesn't require any signup to comment and the comments are directly added to the gh-pages branch's ```_data``` folder . One can give suggestions/ask questions via these comment section . We can also apply a filter that will turn off spam , that I have currently disabled .
